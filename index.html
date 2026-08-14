@@ -1,504 +1,964 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Trieu Vu Ha — Frontend Developer</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trieu Vu Ha — Frontend Developer</title>
 
-<meta name="description" content="Frontend Developer specialising in React, Next.js and TypeScript. 2 years building enterprise ERP interfaces at scale. Based in Ha Noi, Vietnam." />
-<meta name="author" content="Trieu Vu Ha" />
-<meta name="theme-color" content="#0b0d10" />
+        <meta
+            name="description"
+            content="Frontend Developer specialising in React, Next.js and TypeScript. 2 years building enterprise ERP interfaces at scale. Based in Ha Noi, Vietnam."
+        />
+        <meta name="author" content="Trieu Vu Ha" />
+        <meta name="theme-color" content="#0b0d10" />
 
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Trieu Vu Ha — Frontend Developer" />
-<meta property="og:description" content="Frontend Developer specialising in React, Next.js and TypeScript. 2 years building enterprise ERP interfaces at scale." />
-<meta property="og:image" content="assets/img/avatar.jpg" />
-<meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Trieu Vu Ha — Frontend Developer" />
+        <meta
+            property="og:description"
+            content="Frontend Developer specialising in React, Next.js and TypeScript. 2 years building enterprise ERP interfaces at scale."
+        />
+        <meta property="og:image" content="assets/img/avatar.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23e11d48'/><text x='50' y='68' font-size='52' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>H</text></svg>" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23e11d48'/><text x='50' y='68' font-size='52' font-family='system-ui,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>H</text></svg>"
+        />
 
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="assets/css/style.css" />
-</head>
-<body>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+    <body>
+        <a class="skip-link" href="#main">Skip to content</a>
 
-<a class="skip-link" href="#main">Skip to content</a>
+        <!-- ══ progress ══ -->
+        <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<!-- ══ progress ══ -->
-<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+        <!-- ══ nav ══ -->
+        <header class="nav" id="nav">
+            <div class="container nav__inner">
+                <a href="#hero" class="nav__brand" aria-label="Home">
+                    <span class="nav__mark">H</span>
+                    <span class="nav__name">Trieu Vu Ha</span>
+                </a>
 
-<!-- ══ nav ══ -->
-<header class="nav" id="nav">
-  <div class="container nav__inner">
-    <a href="#hero" class="nav__brand" aria-label="Home">
-      <span class="nav__mark">H</span>
-      <span class="nav__name">Trieu Vu Ha</span>
-    </a>
+                <nav class="nav__links" id="navLinks" aria-label="Primary">
+                    <a href="#about" class="nav__link">About</a>
+                    <a href="#skills" class="nav__link">Skills</a>
+                    <a href="#experience" class="nav__link">Experience</a>
+                    <a href="#projects" class="nav__link">Projects</a>
+                    <a href="#contact" class="nav__link">Contact</a>
+                </nav>
 
-    <nav class="nav__links" id="navLinks" aria-label="Primary">
-      <a href="#about"      class="nav__link">About</a>
-      <a href="#skills"     class="nav__link">Skills</a>
-      <a href="#experience" class="nav__link">Experience</a>
-      <a href="#projects"   class="nav__link">Projects</a>
-      <a href="#contact"    class="nav__link">Contact</a>
-    </nav>
-
-    <div class="nav__actions">
-      <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle colour theme">
-        <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
-      </button>
-      <button class="icon-btn nav__burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</header>
-
-<main id="main">
-
-<!-- ══ hero ══ -->
-<section class="hero" id="hero">
-  <div class="hero__glow" aria-hidden="true"></div>
-  <div class="hero__grid-bg" aria-hidden="true"></div>
-
-  <div class="container hero__inner">
-    <div class="hero__copy">
-      <p class="hero__eyebrow reveal">
-        <span class="status-dot" aria-hidden="true"></span>
-        Open to Frontend opportunities
-      </p>
-
-      <h1 class="hero__title reveal" style="--d:.05s">
-        Trieu Vu&nbsp;Ha
-      </h1>
-
-      <p class="hero__role reveal" style="--d:.1s">
-        <span class="mono">&lt;</span>Frontend Developer<span class="mono">/&gt;</span>
-      </p>
-
-      <p class="hero__lede reveal" style="--d:.15s">
-        I build scalable, performant web interfaces with <strong>React</strong>,
-        <strong>Next.js</strong> and <strong>TypeScript</strong> — from complex enterprise
-        ERP modules to polished consumer storefronts.
-      </p>
-
-      <div class="hero__cta reveal" style="--d:.2s">
-        <a href="#projects" class="btn btn--primary">
-          View my work
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-        <a href="assets/files/Trieu-Vu-Ha-Frontend-Developer-CV.pdf" class="btn btn--ghost" download>
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          Download CV
-        </a>
-      </div>
-
-      <ul class="hero__meta reveal" style="--d:.25s">
-        <li>
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Noi Bai, Ha Noi
-        </li>
-        <li>
-          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          <a href="mailto:trieuvuha123@gmail.com">trieuvuha123@gmail.com</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="hero__portrait reveal" style="--d:.3s">
-      <div class="portrait">
-        <div class="portrait__ring" aria-hidden="true"></div>
-        <img src="assets/img/avatar.jpg" alt="Portrait of Trieu Vu Ha" width="375" height="375" fetchpriority="high" />
-      </div>
-      <div class="chip chip--1"><span class="mono">React</span></div>
-      <div class="chip chip--2"><span class="mono">Next.js</span></div>
-      <div class="chip chip--3"><span class="mono">TypeScript</span></div>
-    </div>
-  </div>
-
-  <a href="#about" class="hero__scroll" aria-label="Scroll to About">
-    <span class="hero__mouse"><span></span></span>
-  </a>
-</section>
-
-<!-- ══ about ══ -->
-<section class="section" id="about">
-  <div class="container">
-    <header class="section__head reveal">
-      <span class="section__num mono">01</span>
-      <h2 class="section__title">About me</h2>
-    </header>
-
-    <div class="about">
-      <div class="about__text reveal">
-        <p class="lead">
-          My goal is to join a product-driven company as a Frontend Developer, leveraging
-          experience in developing scalable web applications.
-        </p>
-        <p>
-          Over the past two years at <strong>AFS Technology Solutions</strong> I built and
-          maintained several modules of an enterprise ERP platform — Access Control (ACS),
-          Logistics, HRM request management and ticketing — where correctness, permission
-          handling and predictable performance matter more than novelty.
-        </p>
-        <p>
-          I care about the parts of frontend work that users feel but rarely name: a form
-          with fifty fields that still responds instantly, a table that stays readable at
-          10,000 rows, a loading state that never flashes. I am eager to keep growing my
-          expertise in modern frontend architecture and state-management patterns.
-        </p>
-      </div>
-
-      <div class="about__stats">
-        <div class="stat reveal" style="--d:.05s">
-          <span class="stat__num">2<span class="stat__plus">+</span></span>
-          <span class="stat__label">Years building<br />production frontends</span>
-        </div>
-        <div class="stat reveal" style="--d:.1s">
-          <span class="stat__num">4<span class="stat__plus">+</span></span>
-          <span class="stat__label">ERP modules<br />shipped &amp; maintained</span>
-        </div>
-        <div class="stat reveal" style="--d:.15s">
-          <span class="stat__num">3.01</span>
-          <span class="stat__label">GPA — B.Sc. IT<br />Hanoi Open University</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══ skills ══ -->
-<section class="section section--alt" id="skills">
-  <div class="container">
-    <header class="section__head reveal">
-      <span class="section__num mono">02</span>
-      <h2 class="section__title">Technical skills</h2>
-      <p class="section__sub">The stack I reach for, and what I use it to build.</p>
-    </header>
-
-    <div class="skills">
-      <article class="skill-card reveal">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
-        </div>
-        <h3>Core &amp; Frameworks</h3>
-        <ul class="tags">
-          <li>React.js</li><li>Next.js</li><li>TypeScript</li>
-          <li>JavaScript ES6+</li><li>SSR / SSG</li><li>i18n</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal" style="--d:.05s">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3>State &amp; Data</h3>
-        <ul class="tags">
-          <li>Redux Toolkit</li><li>Zustand</li><li>TanStack Query</li>
-          <li>Axios</li><li>RESTful APIs</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal" style="--d:.1s">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="14.5" r="2.5"/><circle cx="8.5" cy="7.5" r="2.5"/><circle cx="6.5" cy="15.5" r="2.5"/><path d="M12 22a10 10 0 1 1 0-20"/></svg>
-        </div>
-        <h3>UI &amp; Styling</h3>
-        <ul class="tags">
-          <li>Material UI</li><li>Tailwind CSS</li><li>SCSS</li>
-          <li>Recharts</li><li>Responsive design</li><li>Design systems</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal" style="--d:.15s">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h6M9 17h3"/></svg>
-        </div>
-        <h3>Forms &amp; Performance</h3>
-        <ul class="tags">
-          <li>React Hook Form</li><li>Lazy loading</li><li>React.memo</li>
-          <li>useMemo / useCallback</li><li>Code splitting</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal" style="--d:.2s">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6"/><path d="M2 8h20v4H2zM12 20V8M12 8 8.5 4.5a2.5 2.5 0 1 1 3.5-3.5M12 8l3.5-3.5a2.5 2.5 0 1 0-3.5-3.5"/></svg>
-        </div>
-        <h3>Backend Basics</h3>
-        <ul class="tags">
-          <li>Node.js</li><li>Express.js</li><li>MySQL</li>
-          <li>Redis</li><li>JWT</li><li>Docker</li>
-        </ul>
-      </article>
-
-      <article class="skill-card reveal" style="--d:.25s">
-        <div class="skill-card__icon">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.5"/></svg>
-        </div>
-        <h3>Tooling &amp; Workflow</h3>
-        <ul class="tags">
-          <li>Git &amp; GitHub</li><li>Postman</li><li>VS Code</li>
-          <li>Claude Code</li><li>AI-assisted dev</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ══ experience ══ -->
-<section class="section" id="experience">
-  <div class="container">
-    <header class="section__head reveal">
-      <span class="section__num mono">03</span>
-      <h2 class="section__title">Work experience</h2>
-    </header>
-
-    <ol class="timeline">
-      <li class="tl-item reveal">
-        <div class="tl-item__marker" aria-hidden="true"></div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <div>
-              <h3 class="tl-item__role">Front End Developer</h3>
-              <p class="tl-item__org">AFS Technology Solutions JSC</p>
+                <div class="nav__actions">
+                    <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle colour theme">
+                        <svg
+                            class="icon-sun"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                        >
+                            <circle cx="12" cy="12" r="4" />
+                            <path
+                                d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                            />
+                        </svg>
+                        <svg
+                            class="icon-moon"
+                            viewBox="0 0 24 24"
+                            width="18"
+                            height="18"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                        >
+                            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+                        </svg>
+                    </button>
+                    <button
+                        class="icon-btn nav__burger"
+                        id="burger"
+                        type="button"
+                        aria-label="Open menu"
+                        aria-expanded="false"
+                        aria-controls="navLinks"
+                    >
+                        <span></span><span></span><span></span>
+                    </button>
+                </div>
             </div>
-            <span class="badge badge--live mono">Aug 2024 — Jun 2026</span>
-          </div>
+        </header>
 
-          <ul class="bullets">
-            <li>Developed and maintained ERP modules — <strong>ACS</strong> (Access Control System), <strong>Logistics</strong>, <strong>HRM</strong> request management and Ticketing — supporting complex business workflows and enterprise-level access control.</li>
-            <li>Used <strong>React.js, Next.js and TypeScript</strong> as core technologies to keep the codebase scalable, maintainable and architecturally modern.</li>
-            <li>Implemented <strong>Server-Side Rendering</strong> to improve overall performance and SEO.</li>
-            <li>Designed and built a responsive <strong>admin dashboard</strong> following UI/UX best practices, with clear layouts and intuitive navigation.</li>
-            <li>Built a library of reusable MUI components — Button, Table, Autocomplete, Chip, Input — ensuring design consistency across every module.</li>
-            <li>Implemented and optimised <strong>dynamic, large-scale forms</strong> with React Hook Form for efficient handling of complex input data.</li>
-            <li>Integrated and managed <strong>RESTful APIs</strong> for full CRUD operations and realtime data synchronisation across modules.</li>
-            <li>Collaborated closely with the backend team to define data models and optimise API integration performance.</li>
-            <li>Leveraged <strong>TanStack Query</strong> for loading states, error management and caching — creating a clear, responsive, user-friendly experience.</li>
-            <li>Optimised performance through lazy loading, memoisation (<span class="mono">React.memo</span>, <span class="mono">useMemo</span>, <span class="mono">useCallback</span>) and efficient rendering strategies.</li>
-            <li>Configured <strong>internationalisation (i18n)</strong> in Next.js for multilingual UI, dynamic content translation and locale-based routing across the ERP system.</li>
-            <li>Used AI-assisted development tools (<strong>Claude Code</strong>) to accelerate feature delivery and improve debugging efficiency.</li>
-          </ul>
+        <main id="main">
+            <!-- ══ hero ══ -->
+            <section class="hero" id="hero">
+                <div class="hero__glow" aria-hidden="true"></div>
+                <div class="hero__grid-bg" aria-hidden="true"></div>
 
-          <ul class="tags tags--sm">
-            <li>React.js</li><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li>
-            <li>MUI</li><li>React Hook Form</li><li>TanStack Query</li>
-            <li>Redux Toolkit</li><li>Axios</li><li>Recharts</li>
-          </ul>
-        </div>
-      </li>
+                <div class="container hero__inner">
+                    <div class="hero__copy">
+                        <p class="hero__eyebrow reveal">
+                            <span class="status-dot" aria-hidden="true"></span>
+                            Open to Frontend opportunities
+                        </p>
 
-      <li class="tl-item reveal">
-        <div class="tl-item__marker" aria-hidden="true"></div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <div>
-              <h3 class="tl-item__role">Backend Intern — Website Team</h3>
-              <p class="tl-item__org">VNPT Cybersecurity Center</p>
+                        <h1 class="hero__title reveal" style="--d: 0.05s">Trieu Vu&nbsp;Ha</h1>
+
+                        <p class="hero__role reveal" style="--d: 0.1s">
+                            <span class="mono">&lt;</span>Frontend Developer<span class="mono">/&gt;</span>
+                        </p>
+
+                        <p class="hero__lede reveal" style="--d: 0.15s">
+                            I build scalable, performant web interfaces with <strong>React</strong>,
+                            <strong>Next.js</strong> and <strong>TypeScript</strong> — from complex enterprise ERP
+                            modules to polished consumer storefronts.
+                        </p>
+
+                        <div class="hero__cta reveal" style="--d: 0.2s">
+                            <a href="#projects" class="btn btn--primary">
+                                View my work
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M5 12h14M13 6l6 6-6 6" />
+                                </svg>
+                            </a>
+                            <a href="assets/files/CV-TrieuVuHa_FrontendDeveloper.pdf" class="btn btn--ghost" download>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                </svg>
+                                Download CV
+                            </a>
+                        </div>
+
+                        <ul class="hero__meta reveal" style="--d: 0.25s">
+                            <li>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="15"
+                                    height="15"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Noi Bai, Ha Noi
+                            </li>
+                            <li>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="15"
+                                    height="15"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-10 6L2 7" />
+                                </svg>
+                                <a href="mailto:trieuvuha123@gmail.com">trieuvuha123@gmail.com</a>
+                            </li>
+                            <li>
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="15"
+                                    height="15"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+                                    />
+                                </svg>
+                                0868 091 736
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="hero__portrait reveal" style="--d: 0.3s">
+                        <div class="portrait">
+                            <div class="portrait__ring" aria-hidden="true"></div>
+                            <img
+                                src="assets/img/avatar.jpg"
+                                alt="Portrait of Trieu Vu Ha"
+                                width="375"
+                                height="375"
+                                fetchpriority="high"
+                            />
+                        </div>
+                        <div class="chip chip--1"><span class="mono">React</span></div>
+                        <div class="chip chip--2"><span class="mono">Next.js</span></div>
+                        <div class="chip chip--3"><span class="mono">TypeScript</span></div>
+                    </div>
+                </div>
+
+                <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+                    <span class="hero__mouse"><span></span></span>
+                </a>
+            </section>
+
+            <!-- ══ about ══ -->
+            <section class="section" id="about">
+                <div class="container">
+                    <header class="section__head reveal">
+                        <span class="section__num mono">01</span>
+                        <h2 class="section__title">About me</h2>
+                    </header>
+
+                    <div class="about">
+                        <div class="about__text reveal">
+                            <p class="lead">
+                                My goal is to join a product-driven company as a Frontend Developer, leveraging
+                                experience in developing scalable web applications.
+                            </p>
+                            <p>
+                                Over the past two years at <strong>AFS Technology Solutions</strong> I built and
+                                maintained several modules of an enterprise ERP platform — Access Control (ACS),
+                                Logistics, HRM request management and ticketing — where correctness, permission handling
+                                and predictable performance matter more than novelty.
+                            </p>
+                            <p>
+                                I care about the parts of frontend work that users feel but rarely name: a form with
+                                fifty fields that still responds instantly, a table that stays readable at 10,000 rows,
+                                a loading state that never flashes. I am eager to keep growing my expertise in modern
+                                frontend architecture and state-management patterns.
+                            </p>
+                        </div>
+
+                        <div class="about__stats">
+                            <div class="stat reveal" style="--d: 0.05s">
+                                <span class="stat__num">2<span class="stat__plus">+</span></span>
+                                <span class="stat__label">Years building<br />production frontends</span>
+                            </div>
+                            <div class="stat reveal" style="--d: 0.1s">
+                                <span class="stat__num">4<span class="stat__plus">+</span></span>
+                                <span class="stat__label">ERP modules<br />shipped &amp; maintained</span>
+                            </div>
+                            <div class="stat reveal" style="--d: 0.15s">
+                                <span class="stat__num">3.01</span>
+                                <span class="stat__label">GPA — B.Sc. IT<br />Hanoi Open University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ skills ══ -->
+            <section class="section section--alt" id="skills">
+                <div class="container">
+                    <header class="section__head reveal">
+                        <span class="section__num mono">02</span>
+                        <h2 class="section__title">Technical skills</h2>
+                        <p class="section__sub">The stack I reach for, and what I use it to build.</p>
+                    </header>
+
+                    <div class="skills">
+                        <article class="skill-card reveal">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16" />
+                                </svg>
+                            </div>
+                            <h3>Core &amp; Frameworks</h3>
+                            <ul class="tags">
+                                <li>React.js</li>
+                                <li>Next.js</li>
+                                <li>TypeScript</li>
+                                <li>JavaScript ES6+</li>
+                                <li>SSR / SSG</li>
+                                <li>i18n</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-card reveal" style="--d: 0.05s">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M12 2 2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3>State &amp; Data</h3>
+                            <ul class="tags">
+                                <li>Redux Toolkit</li>
+                                <li>Zustand</li>
+                                <li>TanStack Query</li>
+                                <li>Axios</li>
+                                <li>RESTful APIs</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-card reveal" style="--d: 0.1s">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="13.5" cy="6.5" r="2.5" />
+                                    <circle cx="17.5" cy="14.5" r="2.5" />
+                                    <circle cx="8.5" cy="7.5" r="2.5" />
+                                    <circle cx="6.5" cy="15.5" r="2.5" />
+                                    <path d="M12 22a10 10 0 1 1 0-20" />
+                                </svg>
+                            </div>
+                            <h3>UI &amp; Styling</h3>
+                            <ul class="tags">
+                                <li>Material UI</li>
+                                <li>Tailwind CSS</li>
+                                <li>SCSS</li>
+                                <li>Recharts</li>
+                                <li>Responsive design</li>
+                                <li>Design systems</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-card reveal" style="--d: 0.15s">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                                    <path d="M9 9h6M9 13h6M9 17h3" />
+                                </svg>
+                            </div>
+                            <h3>Forms &amp; Performance</h3>
+                            <ul class="tags">
+                                <li>React Hook Form</li>
+                                <li>Lazy loading</li>
+                                <li>React.memo</li>
+                                <li>useMemo / useCallback</li>
+                                <li>Code splitting</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-card reveal" style="--d: 0.2s">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-6" />
+                                    <path
+                                        d="M2 8h20v4H2zM12 20V8M12 8 8.5 4.5a2.5 2.5 0 1 1 3.5-3.5M12 8l3.5-3.5a2.5 2.5 0 1 0-3.5-3.5"
+                                    />
+                                </svg>
+                            </div>
+                            <h3>Backend Basics</h3>
+                            <ul class="tags">
+                                <li>Node.js</li>
+                                <li>Express.js</li>
+                                <li>MySQL</li>
+                                <li>Redis</li>
+                                <li>JWT</li>
+                                <li>Docker</li>
+                            </ul>
+                        </article>
+
+                        <article class="skill-card reveal" style="--d: 0.25s">
+                            <div class="skill-card__icon">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="20"
+                                    height="20"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"
+                                    />
+                                    <circle cx="12" cy="12" r="3.5" />
+                                </svg>
+                            </div>
+                            <h3>Tooling &amp; Workflow</h3>
+                            <ul class="tags">
+                                <li>Git &amp; GitHub</li>
+                                <li>Postman</li>
+                                <li>VS Code</li>
+                                <li>Claude Code</li>
+                                <li>AI-assisted dev</li>
+                            </ul>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ experience ══ -->
+            <section class="section" id="experience">
+                <div class="container">
+                    <header class="section__head reveal">
+                        <span class="section__num mono">03</span>
+                        <h2 class="section__title">Work experience</h2>
+                    </header>
+
+                    <ol class="timeline">
+                        <li class="tl-item reveal">
+                            <div class="tl-item__marker" aria-hidden="true"></div>
+                            <div class="tl-item__card">
+                                <div class="tl-item__head">
+                                    <div>
+                                        <h3 class="tl-item__role">Front End Developer</h3>
+                                        <p class="tl-item__org">AFS Technology Solutions JSC</p>
+                                    </div>
+                                    <span class="badge badge--live mono">Aug 2024 — Jun 2026</span>
+                                </div>
+
+                                <ul class="bullets">
+                                    <li>
+                                        Developed and maintained ERP modules — <strong>ACS</strong> (Access Control
+                                        System), <strong>Logistics</strong>, <strong>HRM</strong> request management and
+                                        Ticketing — supporting complex business workflows and enterprise-level access
+                                        control.
+                                    </li>
+                                    <li>
+                                        Used <strong>React.js, Next.js and TypeScript</strong> as core technologies to
+                                        keep the codebase scalable, maintainable and architecturally modern.
+                                    </li>
+                                    <li>
+                                        Implemented <strong>Server-Side Rendering</strong> to improve overall
+                                        performance and SEO.
+                                    </li>
+                                    <li>
+                                        Designed and built a responsive <strong>admin dashboard</strong> following UI/UX
+                                        best practices, with clear layouts and intuitive navigation.
+                                    </li>
+                                    <li>
+                                        Built a library of reusable MUI components — Button, Table, Autocomplete, Chip,
+                                        Input — ensuring design consistency across every module.
+                                    </li>
+                                    <li>
+                                        Implemented and optimised <strong>dynamic, large-scale forms</strong> with React
+                                        Hook Form for efficient handling of complex input data.
+                                    </li>
+                                    <li>
+                                        Integrated and managed <strong>RESTful APIs</strong> for full CRUD operations
+                                        and realtime data synchronisation across modules.
+                                    </li>
+                                    <li>
+                                        Collaborated closely with the backend team to define data models and optimise
+                                        API integration performance.
+                                    </li>
+                                    <li>
+                                        Leveraged <strong>TanStack Query</strong> for loading states, error management
+                                        and caching — creating a clear, responsive, user-friendly experience.
+                                    </li>
+                                    <li>
+                                        Optimised performance through lazy loading, memoisation (<span class="mono"
+                                            >React.memo</span
+                                        >, <span class="mono">useMemo</span>, <span class="mono">useCallback</span>) and
+                                        efficient rendering strategies.
+                                    </li>
+                                    <li>
+                                        Configured <strong>internationalisation (i18n)</strong> in Next.js for
+                                        multilingual UI, dynamic content translation and locale-based routing across the
+                                        ERP system.
+                                    </li>
+                                    <li>
+                                        Used AI-assisted development tools (<strong>Claude Code</strong>) to accelerate
+                                        feature delivery and improve debugging efficiency.
+                                    </li>
+                                </ul>
+
+                                <ul class="tags tags--sm">
+                                    <li>React.js</li>
+                                    <li>Next.js</li>
+                                    <li>TypeScript</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>MUI</li>
+                                    <li>React Hook Form</li>
+                                    <li>TanStack Query</li>
+                                    <li>Redux Toolkit</li>
+                                    <li>Axios</li>
+                                    <li>Recharts</li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="tl-item reveal">
+                            <div class="tl-item__marker" aria-hidden="true"></div>
+                            <div class="tl-item__card">
+                                <div class="tl-item__head">
+                                    <div>
+                                        <h3 class="tl-item__role">Backend Intern — Website Team</h3>
+                                        <p class="tl-item__org">VNPT Cybersecurity Center</p>
+                                    </div>
+                                    <span class="badge mono">Feb 2024 — Jun 2024</span>
+                                </div>
+
+                                <ul class="bullets">
+                                    <li>
+                                        Researched computer networks and DevOps practices; assisted in developing APIs
+                                        and data processing for blog-post management and recruitment systems using
+                                        <strong>Node.js and Express</strong>.
+                                    </li>
+                                    <li>
+                                        Performed API testing and resolved bugs from frontend-developer feedback to
+                                        ensure reliability and performance.
+                                    </li>
+                                    <li>
+                                        Integrated <strong>Redis</strong> for caching and API performance optimisation.
+                                    </li>
+                                    <li>
+                                        Collaborated via <strong>Git and GitHub</strong> for version control and team
+                                        coordination.
+                                    </li>
+                                </ul>
+
+                                <ul class="tags tags--sm">
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>Docker</li>
+                                    <li>MySQL</li>
+                                    <li>Redis</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <!-- ══ projects ══ -->
+            <section class="section section--alt" id="projects">
+                <div class="container">
+                    <header class="section__head reveal">
+                        <span class="section__num mono">04</span>
+                        <h2 class="section__title">Selected projects</h2>
+                        <p class="section__sub">Personal and academic work, all source available on GitHub.</p>
+                    </header>
+
+                    <div class="projects">
+                        <article class="project project--featured reveal">
+                            <div class="project__banner" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="30"
+                                    height="30"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="project__body">
+                                <div class="project__meta">
+                                    <span class="badge badge--accent mono">Graduation project</span>
+                                    <span class="project__date mono">Mar — May 2025</span>
+                                </div>
+                                <h3 class="project__title">Tran Huy Mobile — E-commerce Platform</h3>
+                                <p class="project__desc">
+                                    A full online sales platform for a mobile-device retailer. Customers register,
+                                    search and filter products by price and brand, browse detailed variants with images
+                                    and pricing, add to cart, place orders and pay online. The admin side covers
+                                    inventory management, order tracking, warranty processing, and sales and import
+                                    reporting across products, categories, brands, customers and staff.
+                                </p>
+                                <ul class="tags tags--sm">
+                                    <li>React.js</li>
+                                    <li>Tailwind CSS</li>
+                                    <li>Node.js</li>
+                                    <li>Express.js</li>
+                                    <li>JWT</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <div class="project__links">
+                                    <a
+                                        href="https://github.com/HaTrieuVu/Graduation-Project-Frontend"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn"
+                                    >
+                                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                                            <path
+                                                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                                            />
+                                        </svg>
+                                        Frontend
+                                    </a>
+                                    <a
+                                        href="https://github.com/HaTrieuVu/Graduation-Project-Backend"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn"
+                                    >
+                                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                                            <path
+                                                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                                            />
+                                        </svg>
+                                        Backend
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project reveal" style="--d: 0.05s">
+                            <div class="project__banner" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="30"
+                                    height="30"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <circle cx="9" cy="21" r="1" />
+                                    <circle cx="19" cy="21" r="1" />
+                                    <path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6" />
+                                </svg>
+                            </div>
+                            <div class="project__body">
+                                <div class="project__meta">
+                                    <span class="badge mono">Personal</span>
+                                    <span class="project__date mono">Jun — Jul 2024</span>
+                                </div>
+                                <h3 class="project__title">E-commerce Storefront</h3>
+                                <p class="project__desc">
+                                    An online shopping interface that lets users find what they want without going to a
+                                    store — search, filter by category, and build up a cart, all with a component-driven
+                                    React front end.
+                                </p>
+                                <ul class="tags tags--sm">
+                                    <li>React.js</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                                <div class="project__links">
+                                    <a
+                                        href="https://github.com/HaTrieuVu/e-commerce-ui"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn"
+                                    >
+                                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                                            <path
+                                                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                                            />
+                                        </svg>
+                                        Source
+                                    </a>
+                                    <a
+                                        href="https://e-commerce-ui-eosin.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn link-btn--accent"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            width="15"
+                                            height="15"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"
+                                            />
+                                        </svg>
+                                        Live demo
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="project reveal" style="--d: 0.1s">
+                            <div class="project__banner" aria-hidden="true">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="30"
+                                    height="30"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="2" width="20" height="20" rx="2.2" />
+                                    <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5" />
+                                </svg>
+                            </div>
+                            <div class="project__body">
+                                <div class="project__meta">
+                                    <span class="badge mono">Personal</span>
+                                    <span class="project__date mono">May 2024</span>
+                                </div>
+                                <h3 class="project__title">Online Movie Streaming</h3>
+                                <p class="project__desc">
+                                    A free movie-watching site. Users log in, search for a title and filter by favourite
+                                    genres, with global state handled through Redux and styling in SCSS.
+                                </p>
+                                <ul class="tags tags--sm">
+                                    <li>React.js</li>
+                                    <li>SCSS</li>
+                                    <li>Redux</li>
+                                </ul>
+                                <div class="project__links">
+                                    <a
+                                        href="https://github.com/HaTrieuVu/movie-web"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn"
+                                    >
+                                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+                                            <path
+                                                d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                                            />
+                                        </svg>
+                                        Source
+                                    </a>
+                                    <a
+                                        href="https://movie-web-kappa-peach.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="link-btn link-btn--accent"
+                                    >
+                                        <svg
+                                            viewBox="0 0 24 24"
+                                            width="15"
+                                            height="15"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            stroke-width="2"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                        >
+                                            <path
+                                                d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"
+                                            />
+                                        </svg>
+                                        Live demo
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ education ══ -->
+            <section class="section" id="education">
+                <div class="container">
+                    <header class="section__head reveal">
+                        <span class="section__num mono">05</span>
+                        <h2 class="section__title">Education</h2>
+                    </header>
+
+                    <div class="edu reveal">
+                        <div class="edu__icon" aria-hidden="true">
+                            <svg
+                                viewBox="0 0 24 24"
+                                width="22"
+                                height="22"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            >
+                                <path d="M22 9 12 4 2 9l10 5 10-5z" />
+                                <path d="M6 11.5V17c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5.5" />
+                            </svg>
+                        </div>
+                        <div class="edu__body">
+                            <h3>Hanoi Open University</h3>
+                            <p class="edu__degree">B.Sc. Information Technology · Graduated</p>
+                            <p class="edu__note">GPA 3.01 / 4.0</p>
+                        </div>
+                        <span class="badge mono">2021 — 2025</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ══ contact ══ -->
+            <section class="section section--contact" id="contact">
+                <div class="container">
+                    <div class="cta reveal">
+                        <span class="section__num mono">06</span>
+                        <h2 class="cta__title">Let's build something together</h2>
+                        <p class="cta__lede">
+                            I'm currently open to Frontend Developer roles at product-driven companies. The fastest way
+                            to reach me is email — I reply to everything.
+                        </p>
+
+                        <div class="cta__actions">
+                            <a href="mailto:trieuvuha123@gmail.com" class="btn btn--primary">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="m22 7-10 6L2 7" />
+                                </svg>
+                                trieuvuha123@gmail.com
+                            </a>
+                            <a href="tel:+84868091736" class="btn btn--ghost">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                >
+                                    <path
+                                        d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"
+                                    />
+                                </svg>
+                                0868 091 736
+                            </a>
+                        </div>
+
+                        <ul class="socials">
+                            <li>
+                                <a
+                                    href="https://github.com/HaTrieuVu"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="GitHub"
+                                >
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path
+                                            d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.facebook.com/ha.trieuvu.90"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Facebook"
+                                >
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                        <path
+                                            d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"
+                                        />
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="assets/files/CV-TrieuVuHa_FrontendDeveloper.pdf"
+                                    aria-label="Download CV"
+                                    download
+                                >
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        width="18"
+                                        height="18"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        stroke-width="2"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    >
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__inner">
+                <p>© <span id="year">2026</span> Trieu Vu Ha · Noi Bai, Ha Noi</p>
+                <p class="mono footer__built">Built with vanilla HTML, CSS &amp; JS — no framework, no tracker.</p>
             </div>
-            <span class="badge mono">Feb 2024 — Jun 2024</span>
-          </div>
+        </footer>
 
-          <ul class="bullets">
-            <li>Researched computer networks and DevOps practices; assisted in developing APIs and data processing for blog-post management and recruitment systems using <strong>Node.js and Express</strong>.</li>
-            <li>Performed API testing and resolved bugs from frontend-developer feedback to ensure reliability and performance.</li>
-            <li>Integrated <strong>Redis</strong> for caching and API performance optimisation.</li>
-            <li>Collaborated via <strong>Git and GitHub</strong> for version control and team coordination.</li>
-          </ul>
-
-          <ul class="tags tags--sm">
-            <li>Node.js</li><li>Express.js</li><li>Docker</li><li>MySQL</li><li>Redis</li>
-          </ul>
-        </div>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- ══ projects ══ -->
-<section class="section section--alt" id="projects">
-  <div class="container">
-    <header class="section__head reveal">
-      <span class="section__num mono">04</span>
-      <h2 class="section__title">Selected projects</h2>
-      <p class="section__sub">Personal and academic work, all source available on GitHub.</p>
-    </header>
-
-    <div class="projects">
-
-      <article class="project project--featured reveal">
-        <div class="project__banner" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
-        </div>
-        <div class="project__body">
-          <div class="project__meta">
-            <span class="badge badge--accent mono">Graduation project</span>
-            <span class="project__date mono">Mar — May 2025</span>
-          </div>
-          <h3 class="project__title">Tran Huy Mobile — E-commerce Platform</h3>
-          <p class="project__desc">
-            A full online sales platform for a mobile-device retailer. Customers register,
-            search and filter products by price and brand, browse detailed variants with
-            images and pricing, add to cart, place orders and pay online. The admin side
-            covers inventory management, order tracking, warranty processing, and sales
-            and import reporting across products, categories, brands, customers and staff.
-          </p>
-          <ul class="tags tags--sm">
-            <li>React.js</li><li>Tailwind CSS</li><li>Node.js</li>
-            <li>Express.js</li><li>JWT</li><li>MySQL</li>
-          </ul>
-          <div class="project__links">
-            <a href="https://github.com/HaTrieuVu/Graduation-Project-Frontend" target="_blank" rel="noopener noreferrer" class="link-btn">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-              Frontend
-            </a>
-            <a href="https://github.com/HaTrieuVu/Graduation-Project-Backend" target="_blank" rel="noopener noreferrer" class="link-btn">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-              Backend
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project reveal" style="--d:.05s">
-        <div class="project__banner" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
-        </div>
-        <div class="project__body">
-          <div class="project__meta">
-            <span class="badge mono">Personal</span>
-            <span class="project__date mono">Jun — Jul 2024</span>
-          </div>
-          <h3 class="project__title">E-commerce Storefront</h3>
-          <p class="project__desc">
-            An online shopping interface that lets users find what they want without going
-            to a store — search, filter by category, and build up a cart, all with a
-            component-driven React front end.
-          </p>
-          <ul class="tags tags--sm"><li>React.js</li><li>Tailwind CSS</li></ul>
-          <div class="project__links">
-            <a href="https://github.com/HaTrieuVu/e-commerce-ui" target="_blank" rel="noopener noreferrer" class="link-btn">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-              Source
-            </a>
-            <a href="https://e-commerce-ui-eosin.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--accent">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
-              Live demo
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <article class="project reveal" style="--d:.1s">
-        <div class="project__banner" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.2"/><path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 17h5M17 7h5"/></svg>
-        </div>
-        <div class="project__body">
-          <div class="project__meta">
-            <span class="badge mono">Personal</span>
-            <span class="project__date mono">May 2024</span>
-          </div>
-          <h3 class="project__title">Online Movie Streaming</h3>
-          <p class="project__desc">
-            A free movie-watching site. Users log in, search for a title and filter by
-            favourite genres, with global state handled through Redux and styling in SCSS.
-          </p>
-          <ul class="tags tags--sm"><li>React.js</li><li>SCSS</li><li>Redux</li></ul>
-          <div class="project__links">
-            <a href="https://github.com/HaTrieuVu/movie-web" target="_blank" rel="noopener noreferrer" class="link-btn">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-              Source
-            </a>
-            <a href="https://movie-web-kappa-peach.vercel.app/" target="_blank" rel="noopener noreferrer" class="link-btn link-btn--accent">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
-              Live demo
-            </a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══ education ══ -->
-<section class="section" id="education">
-  <div class="container">
-    <header class="section__head reveal">
-      <span class="section__num mono">05</span>
-      <h2 class="section__title">Education</h2>
-    </header>
-
-    <div class="edu reveal">
-      <div class="edu__icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 9 12 4 2 9l10 5 10-5z"/><path d="M6 11.5V17c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5.5"/></svg>
-      </div>
-      <div class="edu__body">
-        <h3>Hanoi Open University</h3>
-        <p class="edu__degree">B.Sc. Information Technology · Graduated</p>
-        <p class="edu__note">GPA 3.01 / 4.0</p>
-      </div>
-      <span class="badge mono">2021 — 2025</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══ contact ══ -->
-<section class="section section--contact" id="contact">
-  <div class="container">
-    <div class="cta reveal">
-      <span class="section__num mono">06</span>
-      <h2 class="cta__title">Let's build something together</h2>
-      <p class="cta__lede">
-        I'm currently open to Frontend Developer roles at product-driven companies.
-        The fastest way to reach me is email — I reply to everything.
-      </p>
-
-      <div class="cta__actions">
-        <a href="mailto:trieuvuha123@gmail.com" class="btn btn--primary">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
-          trieuvuha123@gmail.com
-        </a>
-        <a href="tel:+84868091736" class="btn btn--ghost">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
-          0868 091 736
-        </a>
-      </div>
-
-      <ul class="socials">
-        <li>
-          <a href="https://github.com/HaTrieuVu" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/ha.trieuvu.90" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="assets/files/Trieu-Vu-Ha-Frontend-Developer-CV.pdf" aria-label="Download CV" download>
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="container footer__inner">
-    <p>© <span id="year">2026</span> Trieu Vu Ha · Noi Bai, Ha Noi</p>
-    <p class="mono footer__built">Built with vanilla HTML, CSS &amp; JS — no framework, no tracker.</p>
-  </div>
-</footer>
-
-<script src="assets/js/main.js" defer></script>
-</body>
+        <script src="assets/js/main.js" defer></script>
+    </body>
 </html>
